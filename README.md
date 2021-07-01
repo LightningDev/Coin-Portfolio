@@ -1,24 +1,37 @@
-# README
+# Coin Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is for managing your coin portfolio on some popular exchanges like Binance or FTX.
 
-Things you may want to cover:
+**This app is still in development, feature to caculate missing average price for assets on platforms like Binance will be coming soon!**
 
-* Ruby version
+### Requirements
+```sh
+PostgreSQl
+Ruby On Rails
+```
 
-* System dependencies
+### Installation
 
-* Configuration
+```sh
+bundle install
+rake db:create
+rake db:migration
+```
 
-* Database creation
+Create `.env` for environment configuration at root of the folder with the following parameters:
+```sh
+COIN_PORTFOLIO_DEV_DB_USERNAME="yourpostgresql_username"
+COIN_PORTFOLIO_DEV_DB_PASSWORD="yourpostgresql_password"
 
-* Database initialization
+COIN_PORTFOLIO_PRD_DB_USERNAME="yourpostgresql_username"
+COIN_PORTFOLIO_PRD_DB_PASSWORD="yourpostgresql_password"
 
-* How to run the test suite
+BINANCE_END_POINT="https://api.binance.com"
+FTX_END_POINT="https://ftx.com/api"
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then run the app on http://locahost:3000
 
-* Deployment instructions
-
-* ...
+```sh
+rails s
+```
