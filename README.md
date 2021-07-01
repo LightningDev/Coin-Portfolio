@@ -1,6 +1,8 @@
 # Coin Portfolio
 
-![image](https://user-images.githubusercontent.com/8309405/124051644-37093d00-da60-11eb-86a4-0e52b251ab24.png)
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/8309405/124051644-37093d00-da60-11eb-86a4-0e52b251ab24.png">
+</p>
 
 This app is for managing your coin portfolio on some popular exchanges like Binance or FTX.
 
@@ -37,3 +39,8 @@ Then run the app on http://locahost:3000
 ```sh
 rails s
 ```
+
+You will see this screen if everything run successfully then add a new account from your exchange market. Happy Coding!
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/8309405/124051814-8bacb800-da60-11eb-8e10-67f3225feefb.png">
+</p>
