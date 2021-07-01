@@ -1,5 +1,7 @@
 # Coin Portfolio
 
+![image](https://user-images.githubusercontent.com/8309405/124051644-37093d00-da60-11eb-86a4-0e52b251ab24.png)
+
 This app is for managing your coin portfolio on some popular exchanges like Binance or FTX.
 
 **This app is still in development, feature to caculate missing average price for assets on platforms like Binance will be coming soon!**
