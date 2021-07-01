@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  api_key: MyString
+  secret_key: MyString
+  exchange_market: MyString
+
+two:
+  title: MyString
+  api_key: MyString
+  secret_key: MyString
+  exchange_market: MyString

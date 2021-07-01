@@ -1,0 +1,28 @@
+<h1 class="header-center">New Account</h1>
+
+<div>
+  <%= form_with model: @account, html: { class: "form-middle" } do |form| %>
+    <div class="mb-2">
+      <%= form.label :title, { class: "form-label" } %><br>
+      <%= form.text_field :title, { class: "form-control" } %>
+    </div>
+
+    <div class="mb-2">
+      <%= form.label :api_key, { class: "form-label" } %><br>
+      <%= form.text_field :api_key, { class: "form-control" } %>
+    </div>
+
+    <div class="mb-2">
+      <%= form.label :secret_key, { class: "form-label" } %><br>
+      <%= form.text_field :secret_key, { class: "form-control" } %>
+    </div>
+
+    <div class="mb-2">
+      <%= form.label :exchange_market, { class: "form-label" } %><br>
+      <%= form.select :exchange_market, options_for_select([ "FTX", "Binance" ], selected: "Binance"), {}, { class: "form-select" } %>
+    </div>
+    <div>
+      <%= form.submit "Create Account", { class: "btn btn-primary" } %>
+    </div>
+  <% end %>
+</div>

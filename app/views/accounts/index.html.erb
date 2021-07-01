@@ -1,0 +1,43 @@
+<h1 class="header-center">Account List</h1>
+
+<div class="container">
+  <div class="row" style="margin-bottom: 20px">
+    <div class="col">
+      <%= button_to "Refresh", accounts_path, { class: "btn btn-warning", method: :get} %>
+    </div>
+    <div class="col" style="text-align:center">
+      <%= link_to "Add Account", new_account_path, {class: 'btn btn-success'} %>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Api Key</th>
+        <th scope="col">Secret Key</th>
+        <th scope="col">Market </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @accounts.each do |account| %>
+        <tr>
+          <th scope="row">
+            <a href="/accounts/<%= account.id %>">
+              <%= account.title %>
+            </a>
+          </th>
+          <td>
+            <%= account.api_key %>
+          </td>
+          <td type="password">
+            ********************************
+          </td>
+          <td>
+            <%= account.exchange_market %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+

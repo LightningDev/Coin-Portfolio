@@ -1,0 +1,42 @@
+<h1 class="header-center"><%= @account.title %></h1>
+
+<div class="container">
+  <div class="row" style="margin-bottom: 20px">
+    <div class="col">
+      <%= button_to "Home", accounts_path, { class: "btn btn-success", method: :get} %>
+    </div>
+    <div class="col">
+      <%= button_to "Refresh", account_path, { class: "btn btn-warning", method: :get} %>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Coin</th>
+        <th scope="col">Total</th>
+        <th scope="col">Available</th>
+        <th scope="col">In Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @account_coins.each do |coin| %>
+        <tr>
+          <th scope="row">
+            <i class="cf cf-<%= coin["asset"].downcase %>">
+              <%= coin["asset"] %>
+            </i>
+          </th> 
+          <td>
+            <%= coin["free"].to_f + coin["locked"].to_f %>
+          </td>
+          <td>
+            <%= coin["free"] %>
+          </td>
+          <td>
+            <%= coin["locked"] %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
